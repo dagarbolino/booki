@@ -58,14 +58,16 @@ header{
 }
 .logo-reservia{
   display: flex;
-  padding: 30px 0px;
+  padding: 30px 50px;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+ background: url(/images/logo/Booki.png) no-repeat;
 }
-.logo{
+#logo{
   width: 61.09px;
   height: 19px;
+
 }
 .nav{
   display: flex;
@@ -203,6 +205,8 @@ header{
   border: 1px solid var(--blue, #0065FC);
   background: var(--blue, #0065FC);
 }
+
+
 .hsearch{
   color: var(--white, #FFF);
   text-align: center;
@@ -211,6 +215,9 @@ header{
   font-style: normal;
   font-weight: 700;
   line-height: normal;  
+}
+.button-search1:hover{
+  cursor: pointer;   /** sur le btn total **/
 }
 
 
@@ -224,15 +231,20 @@ header{
 .btn-filtres {
   color: #000;
   text-align: center;
-  
-  /* Title/Filter */
   font-family: Raleway;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-.btn-filter {
+.btn-filters {
+  display: flex;
+  height: 50px;
+  padding: 4px 19px;
+  align-items: center;
+  gap: 10px;
+}
+.btn-filter{
   display: flex;
   height: 50px;
   padding: 4px 19px;
@@ -240,6 +252,9 @@ header{
   gap: 10px;
   border-radius: 25px;
   border: 2px solid var(--grey-tint-2, #D9D9D9);
+}
+.btn-filter:hover{
+  background: white;   /** hover sur le btn, cursor pointer sur l ancre, lien **/
 }
 .btn-filter img{
   width: 22px;
@@ -254,6 +269,7 @@ header{
   line-height: normal;  
   text-decoration: None;
   color: var(--black, #000);
+  
 }
 
 /************    info-bar     ***********/
@@ -329,11 +345,9 @@ align-self: stretch;
   flex: 1 0 0;
   border-radius: 20px;
   background: #FFF;
-
 /* Shadow/Card */
 box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
  }
-
 .img-card{
   height: 124px;
   align-self: stretch;
@@ -341,12 +355,6 @@ box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
   border: 5px solid var(--white, #FFF);
   background: lightgray 50% / cover no-repeat;
 }
-/*.hebergements-cards img {
-    width: 100%;
-    height: 136px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}*/
 .card-content {
   display: flex;
   padding: 0px 15px;
@@ -372,7 +380,6 @@ box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-
 }
 .card-subtitle span{
   color: #000;
@@ -383,42 +390,20 @@ box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
   line-height: normal;
 }
 
-.card-rating{
-  display: flex;
-  width: 81px;
-  height: 13.25px;
-}
-.star{
-  
-  height: 12px;
-  width: 12px;
-  flex-shrink: 0;
-  margin-bottom: 5px;
-  margin-right: 3px;
-}
-
-
-
-
-.card2{
-  display: flex;
-height: 146px;
-justify-content: center;
-align-items: center;
-align-self: stretch;
-border-radius: 20px;
-background: #FFF;
-
-/* Shadow/Card */
-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
-}
-
-
 /********    Populaires    ***********/
+
+.popimg{
+  width: 123px;
+  height: 146px;
+  border-radius: 20px 0px 0px 20px;
+  border-top: 5px solid var(--white, #FFF);
+  border-bottom: 5px solid var(--white, #FFF);
+  border-left: 5px solid var(--white, #FFF);
+  background: lightgray 50% / cover no-repeat;    
+}
 .populaires {
   width: 32%;
   display: flex;
-  width: 429px;
   padding: 30px;
   flex-direction: column;
   align-items: center;
@@ -428,38 +413,112 @@ box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
   background: var(--grey, #F2F2F2);
 }
 .populaires-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50.825px;
+  align-self: stretch;
 }
-.populaires-cards .card2 {
-    display: flex;
-    margin-top: 33px;
+.section-title1{
+  width: 300.308px;
+  color: #000;
+
+  /* Title/Section */
+  font-family: Raleway;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;    
 }
-.populaires-cards .popimg {
-    width: 33%;
-    height: 136px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+.populaires-cards{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  align-self: stretch;  
 }
-.populaires-cards .card-content2 {
-    width: 67%;
-    padding-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
+.populaires-cards i{
+  width: 18px;
+  height: 15.75px;  
 }
-.populaires-cards .card-title2 {
-    margin-top: 10px;
-    margin-bottom: 4px;
+.populaires-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  align-self: stretch; 
 }
-.populaires-cards .card-subtitle2 {
-    margin: 0;
+.card2{
+  display: flex;
+  height: 146px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 20px;
+  background: #FFF;
+  /* Shadow/Card */
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);    
 }
-.populaires-cards .card-rating2 {
-    margin-bottom: 5px;
+.imgrectangle{
+  width: 123px;
+  height: 146px;
+  border-radius: 20px 0px 0px 20px;
+  background: lightgray 50% / cover no-repeat;    
 }
+.card-content2{
+  display: flex;
+  width: 246px;
+  height: 136px;
+  padding: 10px 5px 5px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;  
+}
+.h3p{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+.card-title2{
+  align-self: stretch;
+  color: #000;
+  /* Card/Title */
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;    
+}
+.card-subtitle2{
+  color: #000;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;    
+}
+.card-rating{
+  width: 78px; /* de 68px nous sommes passé a 78px*/
+  height: 12px;
+  flex-shrink: 0;
+  margin-bottom: 5px;
+}
+.star{
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;  
+}
+
+
 
 /***********     Activitées     ***********/
 .activites{
@@ -592,49 +651,200 @@ background: url("/images/activites/reno-laithienne.jpg"), lightgray 50% / cover 
 
     .header {
       width: 100%;
-      
     }  
 
+    /****   search bar    ****/
+    .filter-bar{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    
+    .btn-filters {
+      display: flex;
+      height: 50px;
+    }
     .hebergements-and-populaires {
         flex-direction: column;
     }
-
     .hebergements {
         width: 100%;
     }
-
     .populaires {
         width: 100%;
         margin-top: 50px;
     }
-
+    .populaires-title{
+      justify-content: space-between;
+    }
     .populaires-cards {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: space-between;
     }
-
-    .populaires-cards .card {
-        width: 30%;
+    .populaires-cards .card2 {
+        width: 30%;  
     }
-
+    .card2 {
+      display: flex;
+      height: 146px;
+      justify-content: center;
+      align-items: center;
+      flex: 1 0 0;
+      border-radius: 20px;
+      background: #FFF;
+      box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+    }
     .populaires-cards .card-title {
         font-size: 14px;
     }
-
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
-
-
-
-
-}
-
-
+    .h3p {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      flex: 1 0 0;
+      align-self: stretch;
+    }
+    .card-title2 {
+      color: #000;
+      font-family: Raleway;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .card-subtitle2 {
+      color: #000;
+      font-family: Raleway;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .card-content2 {
+      display: flex;
+      width: 183.333px;
+      padding: 10px 5px 5px 15px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      align-self: stretch;  
+    }
+    /***  activités ***/
+    .activites {
+      display: flex;
+      padding: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+      align-self: stretch;  
+    }
+    
+    .activites-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      align-self: stretch;  
+    }
+    .card-activite {
+      display: flex;
+      height: auto;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1 0 0;
+      border-radius: 20px;
+      box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+    }
+    .card-img1 {
+      height: 200px;
+      align-self: stretch;
+      border-radius: 20px 20px 0px 0px;
+      background: url("/images/activites/reno-laithienne.jpg"), lightgray 50% / cover no-repeat;
+    }
+    .card-img2 {
+      height: 200px;
+      align-self: stretch;
+      border-radius: 20px 20px 0px 0px;
+      background: url("/images/activites/paul-hermann.jpg"), lightgray 50% / cover no-repeat;
+    }
+    .card-img3 {
+      height: 200px;
+      align-self: stretch;
+      border-radius: 20px 20px 0px 0px;
+      background: url("/images/activites/kilyan-sockalingum.jpg"), lightgray 50% / cover no-repeat;
+    }
+    .card-img4 {
+      height: 200px;
+      align-self: stretch;
+      border-radius: 20px 20px 0px 0px;
+      background: url("/images/activites/florian-wehde.jpg"), lightgray 50% / cover no-repeat;
+    }
+    .activites-title {
+      display: flex;
+      height: 70px;
+      
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 0px 0px 20px 20px;
+      background: var(--white, #FFF);
+    }
+    .title-activite {
+      align-self: stretch;
+      color: #000;
+      font-family: Raleway;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+/***  fin activités ****/
 
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+   
+  .header{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+  }
+  .logo-reservia{
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .logo{
+    width: 61.09px;
+    height: 19px;
+  }
+  .ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    align-self: stretch;
+  }
+
+
+
+
+  }
+
+
+
 }
