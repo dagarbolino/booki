@@ -28,7 +28,7 @@ body {
   margin: 0;
   font-size: 22px;
 }
-.card {
+.card, .card2 {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
@@ -37,6 +37,14 @@ body {
 .card img {
   object-fit: cover;
 }
+
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+
 .card-title {
   font-size: 16px;
 }
@@ -62,12 +70,12 @@ header{
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
- background: url(/images/logo/Booki.png) no-repeat;
+
+
 }
-#logo{
+.logo{
   width: 61.09px;
   height: 19px;
-
 }
 .nav{
   display: flex;
@@ -83,19 +91,24 @@ header{
   align-items: flex-end;
   gap: 68px;
 }
-.nav li{
+.nav li a{
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   gap: 68px;
+
 }
-.bttn{
+
+.bttn a{
   width: 113px;
   height: 35px;
+  text-decoration: None;
 }
-.bttn1{
+.bttn1 a{
   width: 63px;
   height: 35px;
+  text-decoration: None;
+
 }
 .nav a{
   color: #000;
@@ -106,6 +119,7 @@ header{
   font-style: normal;
   font-weight: 400;
   line-height: normal;  
+  text-decoration: None;
 }
 .nav a:hover{
   color: var(--blue, #0065FC);
@@ -164,26 +178,7 @@ header{
   flex-shrink: 0;
 }
 
-/***.search-input{
-  color: var(--black, #000);
-  height: 49px;
-  text-align: center;
-  font-family: Raleway;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}***/
-/***.button-search{
-  height: 49px;
-  padding: 15px 16px;
-  align-items: center;
-  gap: 10px;
-  border-radius: 0px 15px 15px 0px;
-  border: 1px solid var(--blue, #0065FC);
-  background: var(--blue, #0065FC);
-}
-*****/
+
 
 .h3marseille{
   color: var(--black, #000);
@@ -338,6 +333,7 @@ align-self: stretch;
 }
  .card{
   display: flex;
+
   padding-bottom: 0px;
   flex-direction: column;
   align-items: center;
@@ -355,7 +351,7 @@ box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
   border: 5px solid var(--white, #FFF);
   background: lightgray 50% / cover no-repeat;
 }
-.card-content {
+.card-content{
   display: flex;
   padding: 0px 15px;
   flex-direction: column;
@@ -441,13 +437,7 @@ box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
   width: 18px;
   height: 15.75px;  
 }
-.populaires-cards {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 30px;
-  align-self: stretch; 
-}
+
 .card2{
   display: flex;
   height: 146px;
@@ -687,18 +677,16 @@ background: url("/images/activites/reno-laithienne.jpg"), lightgray 50% / cover 
     .populaires-cards .card2 {
         width: 30%;  
     }
+   
     .card2 {
       display: flex;
-      height: 146px;
-      justify-content: center;
-      align-items: center;
-      flex: 1 0 0;
-      border-radius: 20px;
-      background: #FFF;
-      box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+height: 146px;
+justify-content: center;
+align-items: center;
+flex: 1 0 0;
     }
     .populaires-cards .card-title {
-        font-size: 14px;
+        font-size: 10px;
     }
     .populaires-cards .card-subtitle {
         font-size: 13px;
@@ -729,13 +717,19 @@ background: url("/images/activites/reno-laithienne.jpg"), lightgray 50% / cover 
     }
     .card-content2 {
       display: flex;
-      width: 183.333px;
-      padding: 10px 5px 5px 15px;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 24px;
-      align-self: stretch;  
+width: 183.333px;
+padding: 10px 5px 5px 15px;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;  
     }
+    
+
+
+
+    
+
     /***  activités ***/
     .activites {
       display: flex;
@@ -813,7 +807,14 @@ background: url("/images/activites/reno-laithienne.jpg"), lightgray 50% / cover 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
-   
+    body {
+      display: flex;
+width: 375px;
+height: 4058.019px;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+    }
   .header{
     
     display: flex;
@@ -831,6 +832,14 @@ background: url("/images/activites/reno-laithienne.jpg"), lightgray 50% / cover 
   .logo{
     width: 61.09px;
     height: 19px;
+    background-image: url(/images/logo/Booki@3x.png) no-repeat fixed center;
+  }
+  .menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50%;
   }
   .ul{
     display: flex;
@@ -839,11 +848,138 @@ background: url("/images/activites/reno-laithienne.jpg"), lightgray 50% / cover 
     gap: 15px;
     align-self: stretch;
   }
+  li.bttn a, li.bttn1 a{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+      
+  }
+  .nav{
+    display: flex;
+    width: 100%;
+    padding: 0;
+  }
+  .nav a:hover{
+    color: var(--blue, #0065FC);
+    border-bottom: 2px solid #0065FC;
+    border-top: 0px;
+  }
+  /****Info group*****/
+  .info-group{
+    display:flex;
+    width: 100%;
+    height: 400px;
+    padding: 20px 0px;
+    padding-top: 30px;
+    
+    flex-direction: column;
+    
+    gap: 35px;
+    align-self: stretch;  
+  }
+  .headline{
+    display: flex;
+    flex-direction: center;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch; 
+    
+  }
+  .headline h3 p{ 
+    padding: 10px;
+  }
+  .headline p{
+    display: flex;
+    padding-top: 0px;
+  }
+
+.searchh{
+  display: block;
+  width: 100%;
+  flex-direction: center;
+  padding-top: 20px;
+}
+  .form{
+    display: block;
+    width: 100%;
+    height: 49px;
+    
+   padding-top: 20px;
+    border-radius: 15px;
+    border: 1px solid var(--grey, #F2F2F2);
+    background: var(--white, #FFF);  
+  }
+
+  
+
+  /** filter-bar***/
+
+  .info-bar {
+    display:flex;
+    
+    padding-top: 130px;
+    color: #000;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .icon{
+    margin-right: 7px;
+  }
 
 
+  .btn-filters{
+display: flex;
+padding-top: 20px;
+
+  }
+
+
+  .populaires-cards{
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+    border-radius: 15px;
+background: var(--grey, #F2F2F2);
+  }
+
+.filter-bar{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: center;
+}
+.btn-filters{
+  display: flex;
+  
+  width: 100%;
+  flex-direction: column;
+ 
+}
+
+
+  .btn-filter{
+    display: flex;
+    width: 100%;
+    flex-direction: center;
+    
+   
+  }
+.btn-filtres p{
+  padding-bottom: 50px;
+}
+  
 
 
   }
+
+  
 
 
 
