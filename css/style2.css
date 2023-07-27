@@ -48,8 +48,9 @@ body {
   background-position: center;
 }
 .logo-booki{
-  width: 50%;
+  width: 33%;
   height: auto;
+  padding: 30px 50px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;  
@@ -210,6 +211,8 @@ header{
   align-items: flex-start;
   gap: 30px;
   align-self: stretch;
+  margin-bottom: 15px;
+  margin-top: 33px;
 }
 .card{
   display: flex;
@@ -411,25 +414,60 @@ p{
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+  
   .hebergements-and-populaires {
-      flex-direction: column;
-  }
-  .hebergements-and-populaires{
+    display: flex;
     background-color: #FFF;
     width: 95%;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    align-self: stretch;
   }
-  
-  
   .hebergements{
     width: 100%;
-    margin-left: 5px;
   }
+
+  .column1{
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .column2{
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+
+  }
+ 
+  .card{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    gap: 4px;
+    flex: 1 0 0; 
+    
+    
+  }
+
+
+  
 /****** les plus polulaires  ***********/
   .populaires {
-      width: 100%;
+      width: auto;
       margin-top: 50px;
   }
-  
+  .img2{
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
   .populaires-cards {
       display: flex;
@@ -463,16 +501,28 @@ p{
     object-position: center;
   }
   .card-img1 {
+    width: 100%;
     height: 200px;
+    background-position: center;
+    background-size: cover;
   }
   .card-img2 {
+    width: 100%;
     height: 200px;
+    background-position: center;
+    background-size: cover;
   }
   .card-img3 {
+    width: 100%;
     height: 200px;
+    background-position: center;
+    background-size: cover;
   }
   .card-img4 {
+    width: 100%;
     height: 200px;
+    background-position: center;
+    background-size: cover;
   }
   .activites-title {
     height: 33px;
@@ -492,7 +542,10 @@ p{
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   /* ... */
-  
+  .main-container{
+    padding: 0px 10px;
+  }
+
   body{
     display: flex;
     width: 100%;
@@ -501,13 +554,15 @@ p{
     align-items: flex-start;
     gap: 35px;
     align-self: stretch;
+    
+    padding: 10px 0px;
   }
   header{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 0px;
+    
   }
   .logo{
     display: flex;
@@ -536,22 +591,45 @@ p{
     padding-top: 10px;
   }
   
-
-
-
-  /******    hebergement  *********/
+  /******    hebergements  *********/
 
   .hebergements-and-populaires {
     display: flex;
     flex-direction: column-reverse;
     align-self: stretch;
   }
-  .populaires-cards{
-    flex-direction: column;
-  }
   .hebergements-and-populaires section.hebergements{
     background: #FFF;
   }
+
+
+  .card-rating{
+    padding-left: 5px;
+  }
+  .column1, .column2{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .card{
+    width: 100%;
+  }
+  .card .img1, .card .img2{
+      display: flex;
+      width: auto;
+      height: 124px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+  }
+
+
+
+/*****  Populaires  ****************/
+  .populaires-cards .img2{
+    height: 146px;
+  }
+  
   .card-content2{
     align-self: stretch; 
   }
@@ -560,9 +638,8 @@ p{
     height: 146px;
   }
   
-  .card-rating{
-    padding-left: 5px;
-  }
+
+
 
   .activites{
     display: flex;
@@ -585,25 +662,21 @@ p{
     display: flex;
     flex-direction: column;
   }
-}
 
-  
-
-
-
-.hebergements{
-  background-color: var(--main-colorw);
-}
-
-
-  .hebergements .column1, .column2{
+  .activites{
+    display: flex;
     flex-direction: column;
-    padding: 0px 10px;
-    
+    align-items: flex-start;
+    gap: 30px;
+    align-self: stretch;
   }
-  .card{
-    width: 100%;
+  .section-title{
+    height: 30.019px;
+    align-self: stretch;
+  }
+  .activites-card{
+    padding: 10px 10px;
   }
 
-
+}
 }
