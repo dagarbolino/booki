@@ -40,8 +40,23 @@ body {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-.card img {
-  object-fit: cover;
+.img1, .img2 {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.logo-booki{
+  width: 50%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;  
+}
+img .logo-booki{
+  display: flex;
+  justify-content: center;
 }
 
 .card-title {
@@ -67,12 +82,7 @@ header{
   width: 100%;
   justify-content: space-between;
 }
-.logo{
-  display: flex;
-  width: 61.09px;
-  height: 19px;
-  padding: 30px 0px;
-}
+
 .nav{
   display: flex;
 }
@@ -159,9 +169,10 @@ header{
 .info-bar p{
   margin-top: 3px;
 }
-.info-bar img{
+.icon-info{
   margin-right: 7px;
   margin-bottom: 15px;
+  
 }
 /* fin info bar*/
 
@@ -214,7 +225,12 @@ header{
   align-self: stretch;
   border-radius: 20px 20px 0px 0px;
   border: 5px solid var(--white, #FFF);
-  background: lightgray 50% / cover no-repeat;  
+  background: lightgray 50%; 
+  width: auto;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
 }
 
 
@@ -238,6 +254,9 @@ header{
   height: 136px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .populaires-cards .card-content2 {
   width: 67%;
@@ -318,6 +337,7 @@ header{
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
 }
 .card-img1 {
+  width: 100%;
 height: 380px;
 flex-shrink: 0;
 align-self: stretch;
@@ -325,13 +345,16 @@ border-radius: 20px 20px 0px 0px;
 background: url("/images/activites/reno-laithienne.jpg"), lightgray 50% / cover no-repeat;
 }
 .card-img2 {
+  width: 100%;
   height: 380px;
   flex-shrink: 0;
   align-self: stretch;
   border-radius: 20px 20px 0px 0px;
   background: url("/images/activites/paul-hermann.jpg"), lightgray 50% / cover no-repeat;
+
   }
 .card-img3 {
+  width: 100%;
   height: 380px;
   flex-shrink: 0;
   align-self: stretch;
@@ -339,6 +362,7 @@ background: url("/images/activites/reno-laithienne.jpg"), lightgray 50% / cover 
   background: url("/images/activites/kilyan-sockalingum.jpg"), lightgray 50% / cover no-repeat;
 }
 .card-img4 {
+  width: 100%;
   height: 380px;
   flex-shrink: 0;
   align-self: stretch;
@@ -432,7 +456,11 @@ p{
 /***  Activites   ****/
   .card-activite {
     display: flex;
+    width: 100%;
     height: auto;
+    background-position: no-repeat;
+    object-fit: cover;
+    object-position: center;
   }
   .card-img1 {
     height: 200px;
@@ -467,35 +495,36 @@ p{
   
   body{
     display: flex;
+    width: 100%;
+    height: auto;
     flex-direction: column;
     align-items: flex-start;
     gap: 35px;
     align-self: stretch;
   }
   header{
-    display: block;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 0px;
   }
   .logo{
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    padding: 70px;   
   }
+
+  
   .nav{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-   
   }
   .nav li{
     width: 50%;
-    
   }
   .nav a{
-    display: block;
+    display: flex;
     align-items: center;
   }
   .nav li:hover{
@@ -519,6 +548,9 @@ p{
   }
   .populaires-cards{
     flex-direction: column;
+  }
+  .hebergements-and-populaires section.hebergements{
+    background: #FFF;
   }
   .card-content2{
     align-self: stretch; 
