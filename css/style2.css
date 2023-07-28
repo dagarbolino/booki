@@ -556,15 +556,20 @@ p{
   }
   header{
     display: flex;
-flex-direction: column;
-align-items: center;
-align-self: stretch;
-    
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+  }
+  .headline{
+    padding: 35px 20px ;
+  }
+  .picture{
+    display: flex;
+    justify-content: center;
   }
   .logo-booki{
-    display: flex;
-    width: 61.09px;
-    padding: 30px;
+    display:flex;
+    padding: 30px ;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -573,13 +578,15 @@ align-self: stretch;
     width: 100%;
     display: flex;
     align-items: center;
+    
   }
   .nav li{
     width: 50%;
   }
-  .nav a{
+  
+  .a-nav {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
   .nav li:hover{
     color: #0065FC;
@@ -595,6 +602,24 @@ align-self: stretch;
     gap: 20px;
     align-self: stretch;
   }
+  .btn-filtres p{
+    color: #000;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .bttn-styl{
+    color: var(--black, #000);
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
   .bttn-bar1, .bttn-bar2{
     display: flex;
     width: 335px;
@@ -612,6 +637,7 @@ align-self: stretch;
   }
   .bttn-styl{
     display: flex;
+    font-family: 'Raleway', sans-serif;
     height: 50px;
     padding: 4px 19px;
     align-items: center;
@@ -619,10 +645,12 @@ align-self: stretch;
     flex: 1 0 0;
     border-radius: 25px;
     border: 2px solid var(--grey-tint-2, #D9D9D9);
+    background: var(--blue-light, #DEEBFF);
 
+    
   }
   .bttn-styl:hover{
-    color: ;
+    background: #FFF;
   }
   
   /******    hebergements  *********/
@@ -631,9 +659,13 @@ align-self: stretch;
     display: flex;
     flex-direction: column-reverse;
     align-self: stretch;
+    padding: 0px 10px;
   }
   .hebergements-and-populaires section.hebergements{
     background: #FFF;
+  }
+  .hebergements-and-populaires section{
+    border-radius: 0px;
   }
 
 
@@ -660,26 +692,91 @@ align-self: stretch;
 
 
 /*****  Populaires  ****************/
-  .populaires-cards .img2{
-    height: 146px;
-  }
-  
-  .card-content2{
-    align-self: stretch; 
+
+  .populaires{
+    border-radius: 0px 0px;
   }
   .populaires-cards .card2{
+    display: flex;
     width: 100%;
-    height: 146px;
+    height: auto;
+    
   }
   
+  
+  .populaires-cards{
+    display: flex;
+    padding: 10px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    align-self: stretch;
+    background: var(--grey, #F2F2F2);
+    border-radius: 0px;
+  }
+  .card2{
+    display: flex;
+    width: 300px;
+    height: 146px;
+    padding-right: 0px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch; 
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10); 
+  }
+  .img2{
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 20px 0px 0px 20px;
+    border-top: 5px solid var(--white, #FFF);
+    border-bottom: 5px solid var(--white, #FFF);
+    border-left: 5px solid var(--white, #FFF);
+    background: lightgray 50% / cover no-repeat ;
+  }
+  .card-content2{
+    display: flex;
+    width: 223.333px;
+    height: 146px; 
+    padding: 10px 5px 5px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;  
+  }
+  .card-title2{
+    color: #000;  
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;  
+  }
+  .card-subtitle2{
+    color: #000;
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 
 
+  .card-rating2{
+    display: flex;
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+  }
+
+/**** Activités ******/
 
   .activites{
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 30px 0px;
+    padding: 40px 40px;
   }
   .activites-card{
     display: flex;
@@ -690,27 +787,21 @@ align-self: stretch;
     width: 100%;
   }
   
-
-
-  .col-footer{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .activites{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-    align-self: stretch;
-  }
   .section-title{
     height: 30.019px;
     align-self: stretch;
   }
   .activites-card{
-    padding: 10px 10px;
+    width: 287.25px;
+    padding: 0px 0px;
   }
 
+  /****   Footer  ****/
+  .col-footer{
+    display: flex;
+    flex-direction: column;
+
+    margin: 20px; /** verssion portable avec une marge pour que les doights de selectione pas l'écran**/
+  }
 }
 }
