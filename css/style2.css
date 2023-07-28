@@ -560,8 +560,12 @@ p{
     align-items: center;
     align-self: stretch;
   }
+  .info-group{
+    margin-top: 10px;
+  }
   .headline{
-    padding: 35px 20px ;
+    margin-top: 20px;
+    margin-bottom: 10px; /*** calcul add et soust pour obtenir 30px ***/
   }
   .picture{
     display: flex;
@@ -601,6 +605,7 @@ p{
     align-items: flex-start;
     gap: 20px;
     align-self: stretch;
+    margin-top: 15px;
   }
   .btn-filtres p{
     color: #000;
@@ -633,7 +638,7 @@ p{
   }
   
   .bttn-bar2{
-    padding-bottom: 25px;
+    padding-bottom: 35px;
   }
   .bttn-styl{
     display: flex;
@@ -714,6 +719,10 @@ p{
     background: var(--grey, #F2F2F2);
     border-radius: 0px;
   }
+  /** auto: pour nous avoir toute la photo    **/
+  .populaires-cards .img2{
+    height: auto;
+  }
   .card2{
     display: flex;
     width: 300px;
@@ -739,7 +748,7 @@ p{
     display: flex;
     width: 223.333px;
     height: 146px; 
-    padding: 10px 5px 5px 15px;
+    padding: 0px 5px 0px 0px;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
@@ -761,13 +770,14 @@ p{
     font-weight: 400;
     line-height: normal;
   }
-
+  
 
   .card-rating2{
     display: flex;
     width: 12px;
     height: 12px;
     flex-shrink: 0;
+    padding-left: 5px;
   }
 
 /**** Activités ******/
