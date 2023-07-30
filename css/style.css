@@ -162,7 +162,7 @@ header {
 }
 
 .h3-search {
-  color: var(--white, #fff);
+  color: black;
   text-align: center;
   font-family: Raleway;
   font-size: 18px;
