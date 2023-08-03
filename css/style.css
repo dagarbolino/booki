@@ -20,15 +20,12 @@ body {
   display: block;
   justify-content: center;
   padding-bottom: 60px;
-}
-
-.main-container {
+  margin: auto;
   width: 100%;
   max-width: 1440px;
   padding: 0 50px;
-  box-sizing: border-box;
-  
 }
+
 
 .section-title {
   margin: 0;
@@ -140,8 +137,13 @@ align-self: stretch;
   background: var(--white, #fff);
   border: 1px solid var(--grey, #f2f2f2);
 }
-.h3-search {
+
+.search {
   border: white;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  
 }
 
 .search-bar img {
@@ -454,6 +456,7 @@ align-self: stretch;
 /*********        Footer       *******/
 .col-footer {
   display: flex;
+  width: 100%;
   align-items: flex-start;
   align-self: stretch;
   background: var(--grey, #f2f2f2);
@@ -481,13 +484,14 @@ align-self: stretch;
   text-decoration: None;
 }
 
-p {
+a {
   color: #000;
   font-family: Raleway;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -495,6 +499,7 @@ p {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
   .filtre-bar {
     padding-left: 0px;
     padding-top: 10px;
@@ -662,9 +667,9 @@ p {
       gap: 0px
     }
 
-    .h3-search {
+    .search {
       width: 100%;
-      font-size: 14px;
+      font-size: 18px;
       font-style: normal;
       font-weight: 700;
     }
@@ -883,11 +888,10 @@ p {
 
     /****   Footer  ****/
     .col-footer {
+      width: 100%;
       display: flex;
       flex-direction: column;
-
-      margin: 20px;
-      /** verssion portable avec une marge pour que les doigts de selectione pas l'écran**/
     }
+
   }
 }
