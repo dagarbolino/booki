@@ -17,8 +17,9 @@
 }
 
 body {
-  display: flex;
+  display: block;
   justify-content: center;
+  padding-bottom: 60px;
 }
 
 .main-container {
@@ -26,6 +27,7 @@ body {
   max-width: 1440px;
   padding: 0 50px;
   box-sizing: border-box;
+  
 }
 
 .section-title {
@@ -49,14 +51,7 @@ body {
   background-position: center;
 }
 
-.logo-booki {
-  width: 33%;
-  height: auto;
-  padding: 30px 50px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+
 
 img .logo-booki {
   display: flex;
@@ -78,29 +73,47 @@ img .logo-booki {
 a {
   color: #000;
   text-decoration: None;
+  width: 100%;
 }
 
 /***********     Header     **********/
 header {
   display: flex;
   width: 100%;
+  max-width: 1440px;
   justify-content: space-between;
 }
-
-.nav {
+.logo {
   display: flex;
+  gap: 30px;
 }
 
-.nav li {
+.logo-booki {
+  width: 33%;
+  height: auto;
+  padding: 30px 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+nav {
+  display: flex;
+  padding: 0px 50px;
+}
+
+.a-nav {
   list-style-type: None;
   padding-left: 20px;
   padding: 20px 20px;
-  cursor: pointer;
-}
-
-.nav li:hover {
   color: #0065fc;
   border-top: 2px solid;
+}
+
+.a-nav1 {
+  list-style-type: None;
+  padding-left: 20px;
+  padding: 20px 20px;
 }
 
 /****fin du header******/
@@ -108,29 +121,27 @@ header {
 /********** Info group ***************/
 .info-group {
   display: flex;
-  flex-direction: column;
+flex-direction: column;
+align-items: flex-start;
+gap: 35px;
+align-self: stretch;
 }
 
-.headline h3 {
-  display: flex;
-  padding: 10px 0px;
-}
 
 /*******  Partie recherche  ********/
-.info-search {
-  display: flex;
-  padding: 20px 0px;
-}
 
 .search-bar {
   display: flex;
-  width: 377px;
+  width: auto;
   height: 49px;
   align-items: center;
   gap: 24px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
   border-radius: 15px;
   background: var(--white, #fff);
   border: 1px solid var(--grey, #f2f2f2);
+}
+.h3-search {
+  border: white;
 }
 
 .search-bar img {
@@ -139,7 +150,7 @@ header {
   flex-shrink: 0;
 }
 
-.input .h3-marseille {
+.h3-marseille {
   color: var(--black, #000);
   text-align: center;
   font-family: Raleway;
@@ -161,16 +172,6 @@ header {
   background: var(--blue, #0065fc);
 }
 
-.h3-search {
-  color: black;
-  text-align: center;
-  font-family: Raleway;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
 .button-search:hover {
   cursor: pointer;
 }
@@ -178,28 +179,10 @@ header {
 /*Fin partie recherche*/
 
 /****  Fitre bar   ****/
-.filter-bar {
-  display: flex;
-  height: 50px;
-  align-items: center;
-  gap: 15px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
-}
-
-.btn-filtres,
-.btn-filtres p {
-  color: #000;
-  text-align: center;
-  font-family: Raleway;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
 
 .filtre-bar {
   display: flex;
   height: 50px;
-  padding: 4px 19px;
   align-items: center;
   gap: 10px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
 }
@@ -235,7 +218,7 @@ header {
   font-weight: 700;
   line-height: normal;
   text-decoration: None;
-  color: var(--black, #000);
+  
 }
 
 .bttn-bar1,
@@ -247,10 +230,6 @@ header {
   entre btn1 et btn2 car margin-left 10px sur bttn-styl */
 }
 
-.bttn-styl {
-  display: flex;
-  flex-direction: row;
-}
 
 /*Info bar*/
 .info-bar {
@@ -274,13 +253,15 @@ header {
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 0px;
 }
 
 .hebergements-and-populaires section {
   background-color: var(--main-bg-color);
   border-radius: 20px;
-  padding: 30px;
+  padding: 30px 35px;
   box-sizing: border-box;
+  
 }
 
 /****** Hebergements ***********/
@@ -330,9 +311,7 @@ header {
   border-left-width: 0px;
   border-top-width: 0px;
   border-bottom-width: 0px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  object-fit: cover;
 }
 
 /****** Populaires ***********/
@@ -370,12 +349,7 @@ header {
   height: 136px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  /****object-fit: cover; */
-
-  background-position: center;
+  object-fit: cover;
 }
 
 .populaires-cards .card-content2 {
@@ -406,11 +380,11 @@ header {
 /******* Activités  *********/
 .activites {
   display: flex;
-  padding: 30px;
   flex-direction: column;
   align-items: flex-start;
   gap: 30px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
   align-self: stretch;
+  padding: 35px 0px;
 }
 
 .article .card-activite a {
@@ -640,6 +614,7 @@ p {
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
+      padding-bottom: 0px;
     }
 
     header {
@@ -671,32 +646,20 @@ p {
       align-items: flex-start;
       gap: 10px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
     }
-
-    .nav {
+    nav {
+      display: flex;
+      flex-direction: row;
       width: 100%;
-      display: flex;
-      align-items: center;
-    }
-
-    .nav li {
-      width: 50%;
-    }
-
-    .a-nav {
-      display: flex;
-      align-items: flex-start;
-    }
-
-    .nav li:hover {
-      color: #0065fc;
-      border-top: 0px;
-      border-bottom: 2px solid;
     }
 
     /**********   info-search     *********/
     .info-search {
       display: flex;
       width: 95%;
+    }
+    .search-bar {
+      width: 100%;
+      gap: 0px
     }
 
     .h3-search {
@@ -737,19 +700,11 @@ p {
 
     .bttn-bar1,
     .bttn-bar2 {
-      display: flex;
-      width: 335px;
-      height: 50px;
+      width: 100%;
       padding: 0px 10px;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 10px;
-      align-self: stretch;
-      cursor: pointer;
     }
-
-    .bttn-bar2 {
-      padding-bottom: 35px;
+    .bttn-styl a {
+      text-align: start;
     }
 
     .bttn-styl {
@@ -762,11 +717,12 @@ p {
       flex: 1 0 0;
       border-radius: 25px;
       border: 2px solid var(--grey-tint-2, #d9d9d9);
-      background: var(--blue-light, #deebff);
+      background: #fff;
     }
 
     .bttn-styl:hover {
-      background: #fff;
+      background: var(--blue-light, #deebff);
+      
     }
 
     /********  info-bar  ***********/
