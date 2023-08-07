@@ -142,6 +142,7 @@ nav {
 .search {
   border: white;
   font-size: 20px;
+  font-weight: 600;
   /* permet de de retirer le border de l'input */
   border: none;
   outline: none;
@@ -163,10 +164,14 @@ nav {
   border-radius: 0px 15px 15px 0px;
   border: 1px solid var(--blue, #0065fc);
   background: var(--blue, #0065fc);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .button-search:hover {
   cursor: pointer;
+  color: #000;
 }
 
 /*Fin partie recherche*/
@@ -183,8 +188,7 @@ nav {
   font-size: 18px;
   font-weight: 700;
 }
-
-.bttn-styl {
+button {
   display: flex;
   height: 50px;
   padding: 4px 19px;
@@ -193,30 +197,57 @@ nav {
   border-radius: 25px;
   border: 2px solid var(--grey-tint-2, #d9d9d9);
   margin-left: 10px;
+}
+button img a {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding: 4px 19px;
+  align-items: center;
+  gap: 10px; 
+  border-radius: 25px;
+  border: 2px solid var(--grey-tint-2, #d9d9d9);
+  margin-left: 10px;
+
+}
+button:hover {
+  background: #fff;
+  cursor: pointer;
+  
+}
+.bttn-bar1 a, .bttn-bar2 a{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  
+}
+
+.bttn-bar1 form, .bttn-bar2 form {
+  width: 100%;
+  padding: 6px;
+}
+
+button {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding: 4px 19px;
+  align-items: center;
+  color: #000;
+  font-size: 17px;
+  font-weight: 700;
+  gap: 10px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+  border-radius: 25px;
+  border: 2px solid var(--grey-tint-2, #d9d9d9);
+  margin-left: 10px;
   /* pour avoir une marge a gauche de 10px, 
   qui sera rectifié à : .bttn-bar1, .bttn-bar2  */
 }
 
-.bttn-styl:hover {
-  background: white;
-  /** hover sur le btn, cursor pointer sur l ancre, lien **/
-}
 
-.bttn-styl img {
-  width: 22px;
-  height: 22px;
-}
 
-.bttn-styl a {
-  color: var(--black, #000);
-  font-family: Raleway;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-decoration: None;
-  
-}
+
+
 
 .bttn-bar1,
 .bttn-bar2 {
@@ -484,9 +515,6 @@ nav {
   line-height: normal;
 }
 
-.col-footer a {
-  text-decoration: None;
-}
 
 a {
   color: #000;
@@ -532,10 +560,19 @@ a {
     padding-left: 10px;
   }
 
+
+
+
+
+
+
+
+
+
   .column1 {
-    width: 100%;
+    width: auto;
     height: auto;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .column2 {
@@ -709,8 +746,16 @@ a {
       line-height: normal;
       margin-bottom: 10px;
     }
+  
 
-    .bttn-styl a {
+    .bttn-bar1 form,
+    .bttn-bar2 form {
+      display: flex;
+      flex-direction: row;
+      margin-inline-start: 0px;
+    }
+
+    button {
       color: var(--black, #000);
       font-family: Raleway;
       font-size: 14px;
@@ -719,17 +764,10 @@ a {
       line-height: normal;
     }
 
-    .bttn-bar1,
-    .bttn-bar2 {
-      width: 100%;
-      align-items: center;
-      padding: 10px 20px;/* 10px sur x = 20px entre les 2 column*/
-    }
-    .bttn-styl a {
-      text-align: start;
-    }
 
-    .bttn-styl {
+    
+
+    button {
       display: flex;
       font-family: "Raleway", sans-serif;
       height: 50px;
