@@ -5,14 +5,16 @@
   margin: 0px;
 }
 
-:root {
+:root {/*couleurs du site*/
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
   --main-bg-color-white: white;
+  --main-bg-color-black: black;
   --filter-bg-color: #deebff;
+  --main-bg-color-grey: #d9d9d9;
 }
 
-.fa-solid {
+.fa-xs {
   color: var(--main-color);
 }
 
@@ -22,13 +24,13 @@ body {
   padding-bottom: 60px;
   margin: auto;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1440px; /*au dessus de 1440px nous aurons une marge */
   padding: 0px 0px;
 }
+
 main {
   padding: 0px 50px;
 }
-
 
 .section-title {
   margin: 0;
@@ -36,7 +38,7 @@ main {
 }
 
 .card {
-  background-color: white;
+  background-color: var(--main-bg-color-white);
   border-radius: 20px;
   padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -51,7 +53,6 @@ main {
   background-position: center;
 }
 
-
 .card-title {
   font-size: 16px;
 }
@@ -65,7 +66,7 @@ main {
 }
 
 a {
-  color: #000;
+  color: var(--main-bg-color-black);
   text-decoration: None;
   width: 100%;
 }
@@ -78,6 +79,8 @@ header {
   padding: 0px 0px;
   justify-content: space-between;
 }
+
+/* logo */
 .logo {
   display: flex;
   gap: 30px;
@@ -92,23 +95,21 @@ header {
   background-position: center;
 }
 
-nav {
+/* navigation */
+.nav-bar {
   display: flex;
   padding: 0px 50px;
 }
 
-.a-nav {
-  list-style-type: None;
+.nav-bar a {
   padding-left: 20px;
   padding: 20px 20px;
-  color: #0065fc;
-  border-top: 2px solid;
+  border-top: 2px solid var(--main-bg-color);
 }
 
-.a-nav1 {
-  list-style-type: None;
-  padding-left: 20px;
-  padding: 20px 20px;
+.nav-bar a:hover {
+  color: var(--main-color);
+  border-top: 2px solid;
 }
 
 /****fin du header******/
@@ -121,26 +122,26 @@ nav {
   gap: 35px;
   align-self: stretch;
 }
+
 .info-group-title p {
   margin-top: 8px;
 }
 
-
 /*******  Partie recherche  ********/
-
 .search-bar {
   display: flex;
   width: auto;
   height: 49px;
   align-items: center;
-  gap: 24px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+  /** gap: espaces (les gouttières) entre les lignes et entre les colonnes **/
+  gap: 24px;
   border-radius: 15px;
-  background: var(--white, #fff);
-  border: 1px solid var(--grey, #f2f2f2);
+  background: var(--main-bg-color-white);
+  border: 1px solid var(--main-bg-color);
 }
 
 .search {
-  border: white;
+  border: var(--main-bg-color-white);
   font-size: 20px;
   font-weight: 600;
   /* permet de de retirer le border de l'input */
@@ -160,69 +161,72 @@ nav {
   height: 49px;
   padding: 15px 16px;
   align-items: center;
-  gap: 10px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+  gap: 10px;
   border-radius: 0px 15px 15px 0px;
-  border: 1px solid var(--blue, #0065fc);
-  background: var(--blue, #0065fc);
-  color: #fff;
+  border: 1px solid var(--main-color);
+  background: var(--main-color);
+  color: var(--main-bg-color-white);
   font-size: 18px;
   font-weight: 700;
 }
 
 .button-search:hover {
   cursor: pointer;
-  color: #000;
+  color: var(--main-bg-color-black);
 }
 
 /*Fin partie recherche*/
 
 /****  Fitre bar   ****/
-
 .filtre-bar {
   display: flex;
   height: 50px;
   align-items: center;
-  gap: 10px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+  gap: 10px;
 }
-.filtre-bar p { 
+
+.filtre-bar p {
   font-size: 18px;
   font-weight: 700;
 }
+
 button {
   display: flex;
   height: 50px;
   padding: 4px 19px;
   align-items: center;
-  gap: 10px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+  gap: 10px;
   border-radius: 25px;
-  border: 2px solid var(--grey-tint-2, #d9d9d9);
+  border: 2px solid var(--main-bg-color-grey);
   margin-left: 10px;
 }
+
 button img a {
   display: flex;
   width: 100%;
   height: 50px;
   padding: 4px 19px;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
   border-radius: 25px;
-  border: 2px solid var(--grey-tint-2, #d9d9d9);
+  border: 2px solid var(--main-bg-color-grey);
   margin-left: 10px;
+}
 
-}
 button:hover {
-  background: #fff;
+  background: var(--main-bg-color-white);
   cursor: pointer;
-  
 }
-.bttn-bar1 a, .bttn-bar2 a{
+
+.bttn-bar1 a,
+.bttn-bar2 a {
   display: flex;
   width: 100%;
   align-items: center;
-  
 }
 
-.bttn-bar1 form, .bttn-bar2 form {
+.bttn-bar1 form,
+.bttn-bar2 form {
   width: 100%;
   padding: 6px;
 }
@@ -233,21 +237,16 @@ button {
   height: 50px;
   padding: 4px 19px;
   align-items: center;
-  color: #000;
+  color: var(--main-bg-color-black);
   font-size: 17px;
   font-weight: 700;
-  gap: 10px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+  gap: 10px;
   border-radius: 25px;
-  border: 2px solid var(--grey-tint-2, #d9d9d9);
+  border: 2px solid var(--main-bg-color-grey);
   margin-left: 10px;
   /* pour avoir une marge a gauche de 10px, 
   qui sera rectifié à : .bttn-bar1, .bttn-bar2  */
 }
-
-
-
-
-
 
 .bttn-bar1,
 .bttn-bar2 {
@@ -258,17 +257,16 @@ button {
   entre btn1 et btn2 car margin-left 10px sur bttn-styl */
 }
 
-
-/*Info bar*/
+/****    Info bar****/
 .info-bar {
   display: flex;
-  margin-bottom: 15px; /* avec une marge de 20px a info-group, 
+  margin-bottom: 15px;
+  /* avec une marge de 20px a info-group, 
   nous auron une marge total de 35px*/
 }
 
 .info-bar p {
   margin-top: 3px;
-
 }
 
 .icon-info {
@@ -277,7 +275,6 @@ button {
 }
 
 /* fin info bar*/
-
 /*****Fin Info group*****/
 
 /****** Hebergements And Populaires ***********/
@@ -292,29 +289,31 @@ button {
   border-radius: 20px;
   padding: 30px 35px;
   box-sizing: border-box;
-  
+  /*box dans box*/
 }
 
 /****** Hebergements ***********/
 .hebergements {
-  background-color: #fff;
+  background-color: var(--main-bg-color-white);
   width: 65%;
   padding: 30px;
 }
 
+/* 1er colone pour inclure 3 card*/
 .column1 {
   display: flex;
   align-items: flex-start;
-  gap: 30px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+  gap: 30px;
   align-self: stretch;
   margin-bottom: 15px;
   margin-top: 33px;
 }
 
+/* 2ème colone pour inclure 3 card*/
 .column2 {
   display: flex;
   align-items: flex-start;
-  gap: 30px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+  gap: 30px;
   align-self: stretch;
   margin-bottom: 15px;
   margin-top: 33px;
@@ -325,7 +324,8 @@ button {
   padding-bottom: 10px;
   flex-direction: column;
   align-items: stretch;
-  gap: 4px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+  /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+  gap: 4px;
   flex: 1 0 0;
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
 }
@@ -334,10 +334,9 @@ button {
   height: 124px;
   align-self: stretch;
   border-radius: 20px 20px 0px 0px;
-  border: 5px solid var(--white, #fff);
-  background: lightgray 50%;
+  border: 5px solid var(--main-bg-color-white);
+  background: var(--main-bg-color) 50%;
   width: 100%;
-
   border-right-width: 0px;
   border-left-width: 0px;
   border-top-width: 0px;
@@ -348,7 +347,6 @@ button {
 .afficher-plus {
   padding: 20px 0px;
 }
-
 
 /****** Populaires ***********/
 .populaires {
@@ -371,9 +369,8 @@ button {
   width: 100%;
   padding: 5px 5px;
   border-radius: 20px;
-  background: #fff;
+  background: var(--main-bg-color-white);
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
-
   border-right-width: 0px;
   border-left-width: 0px;
   border-top-width: 0px;
@@ -395,7 +392,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: var(--main-bg-color-white);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -418,7 +415,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+  gap: 30px;
   align-self: stretch;
   padding: 30px 30px;
 }
@@ -444,12 +441,12 @@ button {
   gap: 10px;
   align-self: stretch;
   border-radius: 0px 0px 20px 20px;
-  background: var(--white, #fff);
+  background: var(--main-bg-color-white);
 }
 
 .title-activite {
   align-self: stretch;
-  color: #000;
+  color: var(--main-bg-color-black);
   font-family: Raleway;
   font-size: 16px;
   font-style: normal;
@@ -460,7 +457,7 @@ button {
 .activites-card {
   display: flex;
   align-items: flex-start;
-  gap: 30px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+  gap: 30px;
   align-self: stretch;
 }
 
@@ -481,7 +478,7 @@ button {
   flex-shrink: 0;
   align-self: stretch;
   border-radius: 20px 20px 0px 0px;
-  background: lightgray 50%;
+  background: var(--main-bg-color) 50%;
   background-repeat: no-repeat;
   object-fit: cover;
   background-position: center;
@@ -493,8 +490,7 @@ button {
   width: 100%;
   align-items: flex-start;
   align-self: stretch;
-  background: var(--grey, #f2f2f2);
- 
+  background: var(--main-bg-color);
 }
 
 .a-propos,
@@ -504,10 +500,10 @@ button {
   padding: 20px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 15px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+  gap: 15px;
   flex: 1 0 0;
   align-self: stretch;
-  color: #000;
+  color: var(--main-bg-color-black);
   font-family: Raleway;
   font-size: 18px;
   font-style: normal;
@@ -515,23 +511,21 @@ button {
   line-height: normal;
 }
 
-
 a {
-  color: #000;
+  color: var(--main-bg-color-black);
   font-family: Raleway;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
+/************ Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
- 
+
   .filtre-bar {
     padding-left: 0px;
     padding-top: 10px;
@@ -544,7 +538,7 @@ a {
 
   /****** hebergements-and-populaires  ***********/
   .hebergements-and-populaires {
-    width: 95%;
+    width: 100%;
     flex-direction: column;
   }
 
@@ -560,15 +554,6 @@ a {
     padding-left: 10px;
   }
 
-
-
-
-
-
-
-
-
-
   .column1 {
     width: auto;
     height: auto;
@@ -581,11 +566,9 @@ a {
     justify-content: space-between;
   }
 
-  
-
   /****** les plus polulaires  ***********/
   .populaires {
-    width: auto;
+    width: 100%;
     margin-top: 50px;
   }
 
@@ -600,7 +583,8 @@ a {
   .populaires-cards {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between; /** prends tous l'espace **/
+    justify-content: space-between;
+    /** prends tous l'espace **/
   }
 
   .populaires-cards .card2 {
@@ -620,23 +604,26 @@ a {
   }
 
   /***  Activites   ****/
-
   .activites {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 30px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+    gap: 30px;
     align-self: stretch;
-    padding: 35px 0px;
+    
   }
+
   .card-activite {
     height: auto;
-    background-position: no-repeat;
-    object-fit: cover; 
+    object-fit: cover;
     object-position: center;
   }
 
-  .card-img1, .card-img2, .card-img3, .card-img4 {
+  .card-img1,
+  .card-img2,
+  .card-img3,
+  .card-img4 {
     width: 100%;
     height: 200px;
     background-position: center;
@@ -701,12 +688,24 @@ a {
       padding: 30px;
       flex-direction: column;
       align-items: flex-start;
-      gap: 10px; /** espaces (les gouttières) entre les lignes et entre les colonnes **/
+      gap: 10px;
     }
+
+    /***  navigation   *******/
     nav {
       display: flex;
       flex-direction: row;
       width: 100%;
+    }
+
+    .nav-bar a {
+      border-top: 0px solid;/*supprime ma bordure du haut*/
+      border-bottom: 2px solid var(--main-bg-color);
+    }
+
+    .nav-bar a:hover {
+      border-top: 0px solid;/*supprime ma bordure du haut au hover*/
+      border-bottom: 2px solid;
     }
 
     /**********   info-search     *********/
@@ -714,9 +713,10 @@ a {
       display: flex;
       width: 95%;
     }
+
     .search-bar {
       width: 100%;
-      gap: 0px
+      gap: 20px;
     }
 
     .search {
@@ -726,27 +726,17 @@ a {
       font-weight: 700;
     }
 
+  
+
     /******   filtre bar *********/
     .filtre-bar {
       display: block;
       flex-direction: column;
-      justify-content: center;/** centre  sur info-group**/
+      justify-content: center;
+      /** centre sur info-group **/
       align-items: center;
-       gap: 10px;/** espaces (les gouttières) entre les lignes et entre les colonnes **/
-      
+      gap: 10px;
     }
-
-    .btn-filtres p {
-      color: #000;
-      text-align: center;
-      font-family: Raleway;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      margin-bottom: 10px;
-    }
-  
 
     .bttn-bar1 form,
     .bttn-bar2 form {
@@ -756,33 +746,13 @@ a {
     }
 
     button {
-      color: var(--black, #000);
-      font-family: Raleway;
+      background: var(--main-bg-color-white);
       font-size: 14px;
-      font-style: normal;
       font-weight: 700;
-      line-height: normal;
     }
 
-
-    
-
-    button {
-      display: flex;
-      font-family: "Raleway", sans-serif;
-      height: 50px;
-      padding: 4px 19px;
-      align-items: center;
-      gap: 10px;
-      flex: 1 0 0;
-      border-radius: 25px;
-      border: 2px solid var(--grey-tint-2, #d9d9d9);
-      background: #fff;
-    }
-
-    .bttn-styl:hover {
-      background: var(--blue-light, #deebff);
-      
+    button:hover {
+      background: var(--filter-bg-color);
     }
 
     /********  info-bar  ***********/
@@ -799,7 +769,7 @@ a {
     }
 
     .hebergements-and-populaires section.hebergements {
-      background: #fff;
+      background: var(--main-bg-color-white);
     }
 
     .hebergements-and-populaires section {
@@ -816,8 +786,9 @@ a {
       height: auto;
       flex-direction: column;
     }
+
     .afficher-plus {
-      padding: 0px;
+      padding: 10px;
     }
 
     .card {
@@ -840,15 +811,16 @@ a {
       border-radius: 0px 0px;
       margin-top: 0px;
     }
-    .section-title {
-      color: #000;
 
-/* Title/Section */
-font-family: Raleway;
-font-size: 22px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+    .section-title {
+      color: var(--main-bg-color-black);
+
+      /* Title/Section */
+      font-family: Raleway;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
     }
 
     .populaires-cards .card2 {
@@ -864,7 +836,7 @@ line-height: normal;
       align-items: center;
       gap: 15px;
       align-self: stretch;
-      background: var(--grey, #f2f2f2);
+      background: var(--main-bg-color);
       border-radius: 0px;
     }
 
@@ -882,7 +854,7 @@ line-height: normal;
       align-items: center;
       align-self: stretch;
       border-radius: 20px;
-      background: #fff;
+      background: var(--main-bg-color-white);
       box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
     }
 
@@ -890,10 +862,10 @@ line-height: normal;
       flex: 1 0 0;
       align-self: stretch;
       border-radius: 20px 0px 0px 20px;
-      border-top: 5px solid var(--white, #fff);
-      border-bottom: 5px solid var(--white, #fff);
-      border-left: 5px solid var(--white, #fff);
-      background: lightgray 50% / cover no-repeat;
+      border-top: 5px solid var(--main-bg-color-white);
+      border-bottom: 5px solid var(--main-bg-color-white);
+      border-left: 5px solid var(--main-bg-color-white);
+      background: var(--main-bg-color) 50% / cover no-repeat;
     }
 
     .card-content2 {
@@ -908,7 +880,7 @@ line-height: normal;
     }
 
     .card-title2 {
-      color: #000;
+      color: var(--main-bg-color-black);
       font-family: Raleway;
       font-size: 16px;
       font-style: normal;
@@ -917,7 +889,7 @@ line-height: normal;
     }
 
     .card-subtitle2 {
-      color: #000;
+      color: var(--main-bg-color-black);
       font-family: Raleway;
       font-size: 14px;
       font-style: normal;
@@ -950,19 +922,17 @@ line-height: normal;
       width: 100%;
     }
 
-
     .activites-card {
-      width: 287.25px; /** largeur figma  **/
+      width: 287.25px;
+      /** largeur figma  **/
     }
-    
+
     /****   Footer  ****/
     .col-footer {
       width: auto;
       display: block;
       flex-direction: column;
       gap: 30px;
-      
     }
-
   }
 }
