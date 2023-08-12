@@ -717,6 +717,7 @@ a {
       padding-bottom: 0px;
       margin: auto;
       padding: 0px 10px;
+      gap: 35px;
     }
 
     header {
@@ -774,7 +775,12 @@ a {
       /*supprime ma bordure du haut au hover*/
       border-bottom: 2px solid;
     }
+    /**** info groupe titre  *******/
 
+    .info-group-title {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
     .info-group-title h3 {
       font-size: 22px;
     }
@@ -825,13 +831,6 @@ a {
       width: 100%;
     }
 
-    .bttn-bar1 form,
-    .bttn-bar2 form {
-      display: flex;
-
-      flex-direction: row;
-      margin-inline-start: 0px;
-    }
 
     .bouton-filtre {
       background: var(--main-bg-color-white);
@@ -852,13 +851,15 @@ a {
       display: flex;
       flex-direction: column-reverse;
       align-self: stretch;
+/*
       padding-left: 10px;
       padding-right: 10px;
+*/
     }
 
     .hebergements-and-populaires section.hebergements {
       background: var(--main-bg-color-white);
-      padding: 0px 0px;
+      padding: 35px 0px;
     }
 
     .hebergements-and-populaires section {
@@ -873,25 +874,17 @@ a {
       width: 375px;
       padding-left: 0px;
       padding-right: 0px;
-    }
-
-    .hebergements {
-      width: 100%;
-      border-radius: 0px 0px;
-      margin-top: 0px;
-      padding: 0px 0px;
-      margin: 0px;
+      
     }
 
 
     .column1,
     .column2 {
-
       width: 375px;
       height: auto;
       flex-direction: column;
       align-items: normal;
-
+      
     }
 
     .afficher-plus {
@@ -899,7 +892,7 @@ a {
     }
 
     .card {
-      width: 95%;
+      width: 365px;
     }
 
     .card .img1,
@@ -917,56 +910,49 @@ a {
    
 
     .article .card {
-      width: 95%;
+      width: 100%;
+
       margin: 0px;
     }
-
     .populaires {
+      width: auto;
+     
+    }
+
+    section.populaires {
+      display: block;
+      width: 375px;
       border-radius: 0px 0px;
       margin-top: 0px;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 35px 0px;
+     
     }
-
-    .section-title {
-      color: var(--main-bg-color-black);
-
-      /* Title/Section */
-      font-family: Raleway;
-      font-size: 22px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-    }
-
-    .populaires-cards .card2 {
-      display: flex;
-      width: 100%;
-      height: auto;
-    }
-
+  
     .populaires-cards {
       display: flex;
-      padding: 10px 0px;
+      padding: 35px 0px;
       flex-direction: column;
       align-items: center;
       gap: 15px;
       align-self: stretch;
       background: var(--main-bg-color);
       border-radius: 0px;
+      padding-left: 20px;
+      padding-right: 0px;
     }
 
     /** auto: pour nous avoir toute la photo    **/
     .populaires-cards .img2 {
-      height: auto;
+      height: 146px;
+      
     }
 
-    .card2 {
+    .populaires-cards .card2 {
       display: flex;
-      width: 300px;
+      width: 335px;
       height: 146px;
       padding-right: 0px;
-      justify-content: center;
+      
       align-items: center;
       align-self: stretch;
       border-radius: 20px;
