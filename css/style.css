@@ -695,7 +695,7 @@ a {
       align-items: center;
       padding-bottom: 0px;
       margin: auto;
-      padding: 0px 10px;
+      padding: 0px 0px;
       gap: 35px;
     }
   /****** header ******/
@@ -749,6 +749,7 @@ a {
     /* info group  **/
     .info-group {
       margin-top: 10px;
+      padding: 0px, 20px, 0px, 20px;
     }
 
     .info-group-title {
@@ -901,7 +902,7 @@ a {
 
     .populaires-cards .card2 {
       display: flex;
-      width: 335px;
+      width: 345px;
       height: 146px;
       padding-right: 0px;
       align-items: center;
@@ -986,6 +987,7 @@ a {
       display: block;
       flex-direction: column;
       gap: 30px;
+      
     }
   }
 }
