@@ -26,7 +26,7 @@ body {
   width: 100%;
   max-width: 1440px;
   /*au dessus de 1440px nous aurons une marge */
-  padding: 0px 0px;
+  
   margin: 5px;
   /*avec ce margin, dans le responsive entre tab et port
    pour le filter ok, plus propre*/
@@ -80,7 +80,6 @@ header {
   display: flex;
   width: 100%;
   max-width: 1440px;
-  padding: 0px 0px;
   justify-content: space-between;
 }
 
@@ -154,6 +153,7 @@ input::placeholder {
   color: var(--main-bg-color-black);
 }
 
+/*permet de retirer le border de l'input au click*/
 input:focus {
   outline: none;
 }
@@ -163,8 +163,6 @@ input:focus {
   border: var(--main-bg-color-white);
   font-size: 20px;
   font-weight: 600;
-
-
 }
 
 .search-bar i {
@@ -225,7 +223,6 @@ input:focus {
   display: flex;
   flex-direction: row;
   width: 100%;
-
   margin-right: auto;
   align-items: center;
   flex-wrap: wrap;
@@ -286,25 +283,31 @@ input:focus {
 /****    Info bar****/
 .info-bar {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 35px;
+  gap: 10px;
 }
 
-.info-bar p {
-  margin-top: 3px;
-}
 
 .info-bar i {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   text-align: center;
+  justify-content: center;
   box-sizing: border-box;
   color: var(--main-color);
-  border: 2px solid var(--main-bg-color);
-  border-radius: 50% 50%;
-  font-size: 14px;
-  margin-right: 7px;
-  margin-bottom: 0px;
-  margin-top: 3px;
+  border: 1px solid var(--main-bg-color);
+  border-radius: 50%;
+  font-size: 16px;
+  
+}
+
+.info-bar .fa-solid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 /* fin info bar*/
@@ -596,10 +599,8 @@ a {
     margin-right: 9px;
   }
 
-  .info-bar {
-    padding-top: 15px;
-    padding-bottom: 5px;
-  }
+
+
 
   /* fin de info group */
 
@@ -715,7 +716,6 @@ a {
     main {
       width: 100%;
       padding: 0;
-
     }
 
     body {
@@ -784,10 +784,10 @@ a {
     /******* main    ********/
     /* info group  **/
     .info-group {
-      width: 100%;
+      width: auto;
       height: auto;
       margin-top: 10px;
-      padding: 0;
+      padding: 0px 20px 0px 20px;
     }
 
     .info-group-title {
@@ -805,20 +805,17 @@ a {
       max-width: 377px;
       height: auto;
       justify-content: space-between;
-      border: 0;
     }
 
     .search-bar i {
       min-width: 50px;
       height: 50px;
-
     }
 
     .search {
       width: 100%;
       height: auto;
       font-size: 16px;
-
     }
 
     .button-search {
@@ -826,8 +823,6 @@ a {
       min-width: 50px;
       height: 50px;
       padding: 0px 0px;
-
-
     }
 
     .span-search {
@@ -863,7 +858,6 @@ a {
     .bttn-bar {
       width: 100%;
       height: auto;
-
     }
 
     .bttn-bar1,
@@ -894,6 +888,7 @@ a {
       background: var(--filter-bg-color);
     }
 
+
     /* info-bar */
 
     /********* hebergement and populaires ***********/
@@ -905,7 +900,6 @@ a {
 
     .hebergements-and-populaires section.hebergements {
       background: var(--main-bg-color-white);
-
     }
 
     .hebergements-and-populaires section {
@@ -969,7 +963,6 @@ a {
       height: auto;
       border-radius: 0px 0px;
       margin-top: 0px;
-
     }
 
     .populaires-cards {
@@ -1071,7 +1064,7 @@ a {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 0px 30px;
+      padding: 0px 35px;
     }
     .card-img1,
     .card-img2,
@@ -1085,7 +1078,7 @@ a {
       width: 100%;
       height: auto;
     }
-
+ 
 
     /* fin activites */
 
