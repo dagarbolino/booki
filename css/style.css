@@ -22,14 +22,10 @@
 body {
   display: block;
   justify-content: center;
-  padding-bottom: 60px;
   width: 100%;
   max-width: 1440px;
   /*au dessus de 1440px nous aurons une marge */
-  
-  margin: 5px;
-  /*avec ce margin, dans le responsive entre tab et port
-   pour le filter ok, plus propre*/
+  margin: 0 auto;
 }
 
 main {
@@ -157,7 +153,6 @@ input::placeholder {
 input:focus {
   outline: none;
 }
-
 
 .search {
   border: var(--main-bg-color-white);
@@ -289,7 +284,6 @@ input:focus {
   gap: 10px;
 }
 
-
 .info-bar i {
   width: 24px;
   height: 24px;
@@ -300,14 +294,12 @@ input:focus {
   border: 1px solid var(--main-bg-color);
   border-radius: 50%;
   font-size: 16px;
-  
 }
 
 .info-bar .fa-solid {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 /* fin info bar*/
@@ -443,7 +435,7 @@ input:focus {
 
 .populaires-cards .card-content2 {
   width: 67%;
-  padding-left: 15px;
+  padding-left: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -454,7 +446,8 @@ input:focus {
 }
 
 .populaires-cards .card-title2 {
-  margin-top: 10px;
+  margin-top: 5px;
+  /*passage de 10px à 5px pour avoir un responsive tablette Ipad plus beau */
   margin-bottom: 4px;
 }
 
@@ -599,9 +592,6 @@ a {
     margin-right: 9px;
   }
 
-
-
-
   /* fin de info group */
 
   /****** hebergements-and-populaires  ***********/
@@ -618,7 +608,6 @@ a {
 
   .card-rating {
     padding-left: 10px;
-
   }
 
   .card-txt {
@@ -648,20 +637,31 @@ a {
 
   .populaires-cards .card2 {
     width: 30%;
-    height: auto;
+    height: 146px;
   }
 
   .populaires-cards .img2 {
     height: 100%;
+    width: 40%;
+    /*passage de 35% à 40% pour un meilleur rendu */
   }
 
   .populaires-cards .card-title {
+    font-size: 16px;
+  }
+
+  .populaires-cards .card-title2 {
     font-size: 14px;
   }
 
   .populaires-cards .card-subtitle {
     font-size: 13px;
   }
+
+  .populaires-cards .card-subtitle2 {
+    font-size: 14px;
+  }
+
 
   /* fin les plus populaires */
 
@@ -725,9 +725,8 @@ a {
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
-      padding-bottom: 0px;
       margin: auto;
-      padding: 0px;
+      padding: 0;
       gap: 35px;
     }
 
@@ -883,9 +882,13 @@ a {
       margin: 0;
     }
 
-
     .bouton-filtre:hover {
       background: var(--filter-bg-color);
+    }
+
+    .info-bar i {
+      font-size: 14px;
+      /*moins 2px pour un meilleur rendu*/
     }
 
 
@@ -998,9 +1001,6 @@ a {
       flex: 1 0 0;
       align-self: stretch;
       border-radius: 20px 0px 0px 20px;
-      border-top: 5px solid var(--main-bg-color-white);
-      border-bottom: 5px solid var(--main-bg-color-white);
-      border-left: 5px solid var(--main-bg-color-white);
       background: var(--main-bg-color) 50% / cover no-repeat;
     }
 
@@ -1043,7 +1043,6 @@ a {
     }
 
 
-
     /**** Activités ******/
     .activites {
       width: 100%;
@@ -1066,6 +1065,7 @@ a {
       justify-content: center;
       padding: 0px 35px;
     }
+
     .card-img1,
     .card-img2,
     .card-img3,
@@ -1078,7 +1078,7 @@ a {
       width: 100%;
       height: auto;
     }
- 
+
 
     /* fin activites */
 
