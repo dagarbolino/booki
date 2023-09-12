@@ -1078,7 +1078,6 @@ a {
     .card-activite {
       width: 100%;
       height: auto;
-      padding: 30px;
       gap: 30px;
     }
 
@@ -1087,7 +1086,7 @@ a {
 
     /****   Footer  ****/
     footer {
-      width: 100%;
+      width: auto;
       height: auto;
       display: block;
       flex-direction: column;
